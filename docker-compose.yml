@@ -1,0 +1,10 @@
+version: '3'
+services:
+    web-cache:
+        build: .
+        image: web-cache
+        ports:
+            - 4444:443
+        environment:
+            - TARGET_HOST=qstch1-fcmdb02.computervoice.com
+            - TARGET_PORT=9009
